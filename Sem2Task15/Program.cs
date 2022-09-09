@@ -5,6 +5,9 @@
 
 Console.Write("Введите число: ");//Вводим число
 string? inputLine = Console.ReadLine();
+int inputDayofWeek = 0;// Переводим строку в число
+string? outDayofWeeks = string.Empty;// Проверка переменной на отсутствие значения
+
 
 data1();//Вызов метода
 
@@ -35,14 +38,12 @@ void data1()
 }
 
 //Метод проверки цифры, обозначающей день недели, на выходной день. Вариант 2.
-void data2()
+// void data2()
 {
 
     if (inputLine != null)// Проверка переменной на отсутствие значения
     {
-        int inputDayofWeek = int.Parse(inputLine);// Переводим строку в число
-        string? outDayofWeeks = string.Empty;// Проверка переменной на отсутствие значения
-
+        
         switch (inputDayofWeek)//Конструкция для сравнения нескольких значений с перемнной 
         {
             case 1: outDayofWeeks = "Понедельник"; break;
