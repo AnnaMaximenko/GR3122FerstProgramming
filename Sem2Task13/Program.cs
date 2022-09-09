@@ -3,7 +3,6 @@
 //--------------------------------------------------------------------------------------------------------------------------------------
 
 int inputNumber = 0;// Объявляем переменную для методов
-int inputLine = 0;// Объявляем переменную для методов
 
 ReadData();//Вызов метода
 Print();//Вызов метода
@@ -11,26 +10,28 @@ Print();//Вызов метода
 //Метод, для получения числа от пользователя
 void ReadData()
 {
+
     Console.Write("Введите число: ");//Вводим число
     string? inputLine = Console.ReadLine();
-    inputNumber = int.Parse(inputLine);// Переводим строку в число
+    if (inputLine != null)// Проверка переменной на отсутствие значения
+    {
+        inputNumber = int.Parse(inputLine);// Переводим строку в число
+    }
 }
 
 //Метод, для определения третьей цифры числа + вывод результата
 void Print()
 {
-    if (inputLine != null)// Проверка переменной на отсутствие значения
+
+    char[] charArray = inputNumber.ToString().ToCharArray();// Переводим число в массив
+
+    if (charArray.Length >= 3)// Проверяем длинну массива, для решения подходит трехзначные числа
     {
-        char[] charArray = inputNumber.ToString().ToCharArray();// Переводим число в массив
 
-        if (charArray.Length >= 3)// Проверяем длинну массива, для решения подходит трехзначные числа
-        {
-
-            Console.WriteLine(charArray[2]);// Выводим третью цифру
-        }
-        else
-        {
-            Console.WriteLine("Такой цифры нет");// Выводим несоответствие
-        }
+        Console.WriteLine(charArray[2]);// Выводим третью цифру
+    }
+    else
+    {
+        Console.WriteLine("Такой цифры нет");// Выводим несоответствие
     }
 }
