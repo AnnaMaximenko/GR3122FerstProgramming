@@ -134,11 +134,6 @@ int ReadData(string line)
     return number;
 }
 
-// Печать результата
-void PrintResult(string line)
-{
-    Console.WriteLine(line);
-}
 
 // Заполняем массив
 int[] GenArray(int arrLength, int start, int stop)
@@ -193,5 +188,6 @@ int[] arr = GenArray(arrLength, start, stop);
 PrintArray(arr);
 int num = ReadData("Введите искомое значение: ");
 PrintAnswer(ChekNumInArr(arr, num));
+
 
 
