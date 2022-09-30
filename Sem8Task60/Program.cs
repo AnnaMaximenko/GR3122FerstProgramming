@@ -52,6 +52,6 @@ int axisZ = ReadData("Введите количесвто слоёв: ");
 
 
 Console.WriteLine();
-int[,,] Matrix = Fill3DArray(axisX, axisY, zIndex, 1, 9);
+int[,,] Matrix = Fill3DArray(axisX, axisY, axisZ, 1, 9);
 Print3DArray(Matrix);
 

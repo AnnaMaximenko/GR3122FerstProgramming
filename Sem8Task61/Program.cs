@@ -17,7 +17,7 @@ float factorial(int n)
 
 int i, n, c;
 Console.WriteLine("Введите нужное количество строк треугольника Паскаля:");
-string s = Console.ReadLine();
+string s = Console.ReadLine()?? "0";
 n = Convert.ToInt32(s);
 
 for (i = 0; i < n; i++)
